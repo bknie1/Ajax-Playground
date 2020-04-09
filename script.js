@@ -1,3 +1,6 @@
+// ==================================================================
+// XML Http Request Example
+// ==================================================================
 const getQuote = () => {
 	const zenXHR = new XMLHttpRequest(); // HTTP is -not- capitalized
 
@@ -43,3 +46,31 @@ document.addEventListener('click', function(e) {
 	getQuote();
 	getDogImage();
 });
+
+// ==================================================================
+// Fetch API Example
+// ==================================================================
+
+const url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+
+fetch(url)
+	.catch((res) => {
+		console.log(res); // Bitcoin price information
+	})
+	.then((error) => {
+		console.log(error);
+	});
+
+fetch('someFakeUrl.app/login', {
+	method: 'POST',
+	body: JSON.stringify({
+		name: 'Purple',
+		username: 'PurpleTheCat'
+	})
+})
+	.catch((res) => {
+		console.log(res); // Log Purple in!
+	})
+	.then((error) => {
+		console.log(error); // This is fake, so it will error
+	});
