@@ -81,20 +81,20 @@ fetch('someFakeUrl.app/login', {
 
 // Defaults to GET
 $.ajax({
-url: url,
-contentType: "application/json",
-dataType: 'json',
-success: (data) => {
-    console.log(data);
-}
+	url: url,
+	contentType: "application/json",
+	dataType: 'json',
+	success: (data) => {
+		console.log(data);
+	}
 });
 
 $.ajax({
-  type: "POST",
-  url: url,
-  data: data,
-  dataType: 'json',
-  success: (data) => {
-     console.log("Posted: " + data);
-  }
+	type: "POST",
+	url: url,
+	data: data,\
+	dataType: 'json',
+	success: (data) => {
+	 console.log("Posted: " + data);
+	}
 });
