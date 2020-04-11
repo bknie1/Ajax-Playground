@@ -74,3 +74,27 @@ fetch('someFakeUrl.app/login', {
 	.then((error) => {
 		console.log(error); // This is fake, so it will error
 	});
+
+// ==================================================================
+// jQuery AJAX Example
+// ==================================================================
+
+// Defaults to GET
+$.ajax({
+url: url,
+contentType: "application/json",
+dataType: 'json',
+success: (data) => {
+    console.log(data);
+}
+});
+
+$.ajax({
+  type: "POST",
+  url: url,
+  data: data,
+  dataType: 'json',
+  success: (data) => {
+     console.log("Posted: " + data);
+  }
+});
